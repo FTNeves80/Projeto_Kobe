@@ -10,7 +10,7 @@ conf/local/**
 conf/**/*credentials*
 
 # ignore everything in the following folders
-data/**
+#data/**
 
 # except their sub-folders
 !data/**/
@@ -127,7 +127,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+#.ipynb_checkpoints
 
 # IPython
 .ipython/profile_default/history.sqlite
@@ -159,4 +159,4 @@ venv.bak/
 .mypy_cache/
 
 # mlflow local runs
-mlruns/*
+#mlruns/*
