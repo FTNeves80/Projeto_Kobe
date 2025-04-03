@@ -24,8 +24,8 @@ def create_pipeline(**kwargs) -> Pipeline:
          node(
             nodes.treinar_dt,
             inputs=['train_set', 'params:session_id'],
-            outputs='best_model',
-            tags=['train']
+            outputs='best_dt_model',
+            tags=['train', 'decision_tree']
         ),
         node(
             nodes.treinar_lr,

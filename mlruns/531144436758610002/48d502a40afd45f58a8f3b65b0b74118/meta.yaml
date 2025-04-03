@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/48d502a40afd45f58a8f3b65b0b74118/artifacts
+end_time: 1743682035662
+entry_point_name: ''
+experiment_id: '531144436758610002'
+lifecycle_stage: active
+run_id: 48d502a40afd45f58a8f3b65b0b74118
+run_name: __default__
+run_uuid: 48d502a40afd45f58a8f3b65b0b74118
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743681994600
+status: 3
+tags: []
+user_id: Dell
