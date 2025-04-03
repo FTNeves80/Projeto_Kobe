@@ -20,18 +20,6 @@ def create_pipeline(**kwargs) -> Pipeline:
             inputs='data_filtered',
             outputs=['train_set', 'test_set'],
             tags=['split']
-        ),
-         node(
-            nodes.treinar_dt,
-            inputs=['train_set', 'params:session_id'],
-            outputs='best_dt_model',
-            tags=['train', 'decision_tree']
-        ),
-        node(
-            nodes.treinar_lr,
-            inputs=['train_set', 'params:session_id'],
-            outputs='best_lr_model',
-            tags=['train', 'logistic']
         )
     ])
 
