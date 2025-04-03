@@ -19,9 +19,9 @@ test_set:
   type: pandas.ParquetDataset
   filepath: data/05_model_input/test_set.parquet
 
-best_model:
+best_dt_model:
   type: pickle.PickleDataset
-  filepath: data/06_models/best_model.pkl
+  filepath: data/06_models/best_dt_model.pkl
 
 best_lr_model:
   type: pickle.PickleDataset

@@ -22,7 +22,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             tags=['split']
         ),
          node(
-            nodes.treinar_modelo,
+            nodes.treinar_dt,
             inputs=['train_set', 'params:session_id'],
             outputs='best_model',
             tags=['train']
