@@ -19,11 +19,25 @@ test_set:
   type: pandas.ParquetDataset
   filepath: data/05_model_input/test_set.parquet
 
+
+#Para salvar localmente:
+#best_dt_model:
+#  type: pickle.PickleDataset
+#  filepath: data/06_models/best_dt_model.pkl
+
+#best_lr_model:
+#  type: pickle.PickleDataset
+#  filepath: data/06_models/best_lr_model.pkl
+
+#Para no mlflow
 best_dt_model:
-  type: pickle.PickleDataset
-  filepath: data/06_models/best_dt_model.pkl
+  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
+  flavor: mlflow.sklearn
+  save_args:
+    registered_model_name: best_dt_model
 
 best_lr_model:
-  type: pickle.PickleDataset
-  filepath: data/06_models/best_lr_model.pkl
-
+  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
+  flavor: mlflow.sklearn
+  save_args:
+    registered_model_name: best_lr_model
