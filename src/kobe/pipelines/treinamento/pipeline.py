@@ -22,7 +22,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         #)
         node(
             func=nodes.treinar,
-            inputs=["train_set", "params:session_id"],
+            inputs=["train_set","test_set", "params:session_id"],
             outputs=None,
             tags=["train"]
         )

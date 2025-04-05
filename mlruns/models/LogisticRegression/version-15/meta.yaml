@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1743875097049
+current_stage: None
+description: null
+last_updated_timestamp: 1743875097049
+name: LogisticRegression
+run_id: 27a0bbe99eaf4f358a4dd6f59dd45776
+run_link: null
+source: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/27a0bbe99eaf4f358a4dd6f59dd45776/artifacts/model_lr
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/27a0bbe99eaf4f358a4dd6f59dd45776/artifacts/model_lr
+user_id: null
+version: 15

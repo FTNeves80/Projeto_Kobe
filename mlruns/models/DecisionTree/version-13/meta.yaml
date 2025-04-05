@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1743865579842
+current_stage: None
+description: null
+last_updated_timestamp: 1743865579842
+name: DecisionTree
+run_id: c5a2d04199a644928e9974e2b50103f2
+run_link: null
+source: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/c5a2d04199a644928e9974e2b50103f2/artifacts/model_dt
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/c5a2d04199a644928e9974e2b50103f2/artifacts/model_dt
+user_id: null
+version: 13
