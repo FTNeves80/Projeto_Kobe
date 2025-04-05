@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/f7397595a2214af7af6a2fcdc7db629b/artifacts
+end_time: 1743884527079
+entry_point_name: ''
+experiment_id: '531144436758610002'
+lifecycle_stage: active
+run_id: f7397595a2214af7af6a2fcdc7db629b
+run_name: Decision Tree Classifier
+run_uuid: f7397595a2214af7af6a2fcdc7db629b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743884526577
+status: 3
+tags: []
+user_id: Dell
