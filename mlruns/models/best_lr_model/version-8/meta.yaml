@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1743811882003
+current_stage: None
+description: null
+last_updated_timestamp: 1743811882003
+name: best_lr_model
+run_id: c9f8c05bcf364fcfa226aea51028266e
+run_link: null
+source: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/c9f8c05bcf364fcfa226aea51028266e/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/c9f8c05bcf364fcfa226aea51028266e/artifacts/model
+user_id: null
+version: 8

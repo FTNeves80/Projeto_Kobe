@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1743811038017
+current_stage: None
+description: null
+last_updated_timestamp: 1743811038017
+name: best_dt_model
+run_id: e8d135e8ba0b453991d8c0ae2d0365e6
+run_link: null
+source: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/e8d135e8ba0b453991d8c0ae2d0365e6/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/531144436758610002/e8d135e8ba0b453991d8c0ae2d0365e6/artifacts/model
+user_id: null
+version: 10

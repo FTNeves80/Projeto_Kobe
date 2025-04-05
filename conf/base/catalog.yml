@@ -30,14 +30,14 @@ test_set:
 #  filepath: data/06_models/best_lr_model.pkl
 
 #Para no mlflow
-best_dt_model:
-  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
-  flavor: mlflow.sklearn
-  save_args:
-    registered_model_name: best_dt_model
+#best_dt_model:
+#  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
+#  flavor: mlflow.sklearn
+#  save_args:
+#    registered_model_name: best_dt_model
 
-best_lr_model:
-  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
-  flavor: mlflow.sklearn
-  save_args:
-    registered_model_name: best_lr_model
+#best_lr_model:
+#  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
+#  flavor: mlflow.sklearn
+#  save_args:
+#    registered_model_name: best_lr_model
