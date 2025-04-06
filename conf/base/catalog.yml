@@ -7,6 +7,10 @@ raw_train:
   type: pandas.ParquetDataset
   filepath: data/01_raw/dataset_kobe_dev.parquet
 
+raw_prod:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/dataset_kobe_prod.parquet
+
 data_filtered:
   type: pandas.ParquetDataset
   filepath: data/04_feature/data_filtered.parquet
