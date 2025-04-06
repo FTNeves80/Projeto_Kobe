@@ -1,16 +1,15 @@
 """Project pipelines."""
 from __future__ import annotations
 
-from kedro.framework.project import find_pipelines
-from kedro.pipeline import Pipeline
-
+from kobe.pipelines.preparacaodados import pipeline as preparacao_pipeline
+from kobe.pipelines.treinamento import pipeline as treinamento_pipeline
 
 def register_pipelines() -> dict[str, Pipeline]:
-    """Register the project's pipelines.
+    pipelines = {
+        "preparacao": preparacao_pipeline.create_pipeline(),
+        "treinamento": treinamento_pipeline.create_pipeline(),
+    }
 
-    Returns:
-        A mapping from pipeline names to ``Pipeline`` objects.
-    """
-    pipelines = find_pipelines()
-    pipelines["__default__"] = sum(pipelines.values())
+    pipelines["__default__"] = preparacao_pipeline.create_pipeline() + treinamento_pipeline.create_pipeline()
+
     return pipelines
