@@ -17,7 +17,7 @@ def treinar(train_set,session_id):
                   target='shot_made_flag', 
                   session_id=session_id, 
                   log_experiment=True, 
-                  experiment_name="kobe",
+                  experiment_name="Treinamento",
                   experiment_custom_tags={"mlflow.runName": 
                                           f"Treinamento_Kobe_{date.today().strftime('%Y-%m-%d')}" }
                  )
