@@ -23,6 +23,10 @@ test_set:
   type: pandas.ParquetDataset
   filepath: data/05_model_input/test_set.parquet
 
+predictions:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/predictions.parquet
+
 
 #Para salvar localmente:
 #best_dt_model:
