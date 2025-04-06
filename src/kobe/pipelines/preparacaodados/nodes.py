@@ -22,7 +22,7 @@ def dividir_dados(data_filtered):
     run_name = f"PreparacaoDados_{date.today().strftime('%Y-%m-%d')}"
     
     # Log de parâmetros e métricas no MLflow
-    with mlflow.start_run(experiment_name = "PreparacaoDados" ,run_name=run_name, nested=True):
+    with mlflow.start_run(run_name=run_name, nested=True):
          mlflow.log_param("split_test_size", 0.2)
          mlflow.log_param("split_random_state", 10)
          mlflow.log_metric("train_rows", train_set.shape[0])
