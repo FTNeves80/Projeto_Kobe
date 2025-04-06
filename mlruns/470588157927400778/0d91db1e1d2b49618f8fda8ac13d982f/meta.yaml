@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/470588157927400778/0d91db1e1d2b49618f8fda8ac13d982f/artifacts
+end_time: 1743911053617
+entry_point_name: ''
+experiment_id: '470588157927400778'
+lifecycle_stage: active
+run_id: 0d91db1e1d2b49618f8fda8ac13d982f
+run_name: Logistic Regression
+run_uuid: 0d91db1e1d2b49618f8fda8ac13d982f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743911052962
+status: 3
+tags: []
+user_id: Dell
