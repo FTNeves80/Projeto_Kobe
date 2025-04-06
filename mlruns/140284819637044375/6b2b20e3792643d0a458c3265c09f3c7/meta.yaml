@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/140284819637044375/6b2b20e3792643d0a458c3265c09f3c7/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '140284819637044375'
+lifecycle_stage: active
+run_id: 6b2b20e3792643d0a458c3265c09f3c7
+run_name: tasteful-shrike-822
+run_uuid: 6b2b20e3792643d0a458c3265c09f3c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743973522589
+status: 1
+tags: []
+user_id: Dell
