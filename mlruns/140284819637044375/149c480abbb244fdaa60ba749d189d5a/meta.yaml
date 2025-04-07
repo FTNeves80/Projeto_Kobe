@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/140284819637044375/149c480abbb244fdaa60ba749d189d5a/artifacts
+end_time: 1743984954874
+entry_point_name: ''
+experiment_id: '140284819637044375'
+lifecycle_stage: active
+run_id: 149c480abbb244fdaa60ba749d189d5a
+run_name: AplicacaoDados_2025-04-06
+run_uuid: 149c480abbb244fdaa60ba749d189d5a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743984954712
+status: 3
+tags: []
+user_id: Dell
