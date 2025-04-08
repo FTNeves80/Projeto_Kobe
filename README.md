@@ -52,11 +52,15 @@
     Com base na análise da tabela e na comparação dos indicadores de desempenho entre os modelos Logistic Regression (lr) e Decision Tree (dt), a escolha final foi pelo Logistic Regression ajustado (lr). Esse modelo apresentou melhor desempenho nas principais métricas, com maior F1-score, maior Recall e menor Log Loss, sendo, portanto, o mais indicado para o problema em questão.
     
     Abaixo seguem os prints do MLFlow:
-![Treinamento1](docs/Treinamento1.png)
-![Treinamento2_lr](docs/Treinamento2_lr.png)
-![Treinamento3_lr](docs/Treinamento3_lr.png)
-![Treinamento4_dt](docs/Treinamento4_dt.png)
-![Treinamento5_dt](docs/Treinamento5_dt.png)
+![treinamento1](docs/treinamento1.png)
+
+![treinamento2_lr](docs/treinamento2_lr.png)
+
+![treinamento3_lr](docs/treinamento3_lr.png)
+
+![treinamento4_dt](docs/treinamento4_dt.png)
+
+![treinamento5_dt](docs/treinamento5_dt.png)
 
 
 ## Overview
