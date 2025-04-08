@@ -63,6 +63,30 @@
 ![treinamento5_dt](docs/treinamento5_dt.png)
 
 
+### 7 Registre o modelo de classificação e o sirva através do MLFlow (ou como uma API local, ou embarcando o modelo na aplicação). Desenvolva um pipeline de aplicação (aplicacao.py) para carregar a base de produção (/data/raw/dataset_kobe_prod.parquet) e aplicar o modelo. Nomeie a rodada (run) do mlflow como “PipelineAplicacao” e publique, tanto uma tabela com os resultados obtidos (artefato como .parquet), quanto log as métricas do novo log loss e f1_score do modelo.
+        O modelo é aderente a essa nova base? O que mudou entre uma base e outra? Justifique.
+        Descreva como podemos monitorar a saúde do modelo no cenário com e sem a disponibilidade da variável resposta para o modelo em operação.
+        Descreva as estratégias reativa e preditiva de retreinamento para o modelo em operação.
+
+
+### 8 Implemente um dashboard de monitoramento da operação usando Streamlit.
+        Foi desenvolvida uma aplicação web utilizando Streamlit para realizar inferência em tempo real, com base no modelo treinado e servido via MLflow. Segume abaixo o print da aplicação:
+    
+![streamlit1dt](docs/streamlit1dt.png)
+![streamlit2dt](docs/streamlit2dt.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Overview
 
 This is your new Kedro project, which was generated using `kedro 0.19.12`.
@@ -82,5 +106,10 @@ Exmplo de marcaçao MD kedro jupyter notebook
 2-subir o modelo
 3-moninotar via mlflow
 4-Visualizar o front-end
+streamlit> streamlit run app.py
+
+
+mlflow models serve --model-uri models:/runs:/c37b973232204389932db377de875f41/model/1 --env-manager=local --port 5001
+
 
 
