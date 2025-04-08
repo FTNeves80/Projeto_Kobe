@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/470588157927400778/dd37ca4c670847c0819fe5eb845b7034/artifacts
+deleted_time: 1744115810367
 end_time: 1743947458263
 entry_point_name: ''
 experiment_id: '470588157927400778'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: dd37ca4c670847c0819fe5eb845b7034
 run_name: Treinamento_Kobe_2025-04-06
 run_uuid: dd37ca4c670847c0819fe5eb845b7034

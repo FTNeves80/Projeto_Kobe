@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/470588157927400778/51d97b4b01f64b32a6bb1b8a079156c6/artifacts
+deleted_time: 1744115852418
 end_time: 1743947457990
 entry_point_name: ''
 experiment_id: '470588157927400778'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 51d97b4b01f64b32a6bb1b8a079156c6
 run_name: Logistic Regression
 run_uuid: 51d97b4b01f64b32a6bb1b8a079156c6

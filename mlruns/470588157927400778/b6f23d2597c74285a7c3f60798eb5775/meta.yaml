@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Dell/Downloads/Engenharia_de_Machine_Learning/python/kobe/mlruns/470588157927400778/b6f23d2597c74285a7c3f60798eb5775/artifacts
+deleted_time: 1744115810396
 end_time: 1743955059925
 entry_point_name: ''
 experiment_id: '470588157927400778'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b6f23d2597c74285a7c3f60798eb5775
 run_name: Decision Tree Classifier
 run_uuid: b6f23d2597c74285a7c3f60798eb5775

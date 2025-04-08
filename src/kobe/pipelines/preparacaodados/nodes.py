@@ -9,11 +9,18 @@ from pycaret.classification import ClassificationExperiment
 from datetime import date
 
 def preparacao(raw_train):
+    if mlflow.active_run():
+       mlflow.end_run()
+    
     train = raw_train[['lat','lon','minutes_remaining','period','playoffs','shot_distance','shot_made_flag']]
     data_filtered = train.dropna()
     return data_filtered
 
 def dividir_dados(data_filtered):
+    if mlflow.active_run():
+       mlflow.end_run()
+    
+    
     train_set, test_set = train_test_split(data_filtered,test_size=0.2, random_state = 10)
     
     #mlflow.set_experiment("PreparacaoDados")
