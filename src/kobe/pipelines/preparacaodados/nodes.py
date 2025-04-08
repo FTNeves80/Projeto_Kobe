@@ -21,7 +21,7 @@ def dividir_dados(data_filtered):
        mlflow.end_run()
     
     
-    train_set, test_set = train_test_split(data_filtered,test_size=0.2, random_state = 10)
+    train_set, test_set = train_test_split(data_filtered,test_size=0.2, random_state = 10,stratify=data_filtered['shot_made_flag'])
     
     #mlflow.set_experiment("PreparacaoDados")
     

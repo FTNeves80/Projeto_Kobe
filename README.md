@@ -26,6 +26,39 @@
 ![Diagrama_artefatos](docs/Diagrama_artefatos2.png)
 
 
+### 4 Implemente o pipeline de processamento de dados com o mlflow, rodada (run) com o nome "PreparacaoDados":
+    4.1 A dimensão resultate do Dataser data_filtered.parquet após seleção e exclusão de nulos passa a ser (20285, 7)
+
+
+    4.2 Explique como a escolha de treino e teste afetam o resultado do modelo final. Quais estratégias ajudam a minimizar os efeitos de viés de dados.
+        A escolha da proporção entre treino e teste afeta diretamente a qualidade do modelo. Se você reduz muito os dados de treino, o modelo aprende pouco e tem desempenho ruim. Se reduz demais o teste, você perde a referência se ele está generalizando bem. Um equilíbrio comum é 80% treino e 20% teste.Para minimizar o viés, é importante usar amostragem estratificada (manter a proporção das classes) e aplicar validação cruzada (cross-validation), que avalia o modelo em diferentes subconjuntos dos dados, reduzindo a chance de viés por divisão específica
+
+
+    4.3 Registre os parâmetros (% teste) e métricas (tamanho de cada base) no MlFlow - Registro dos parâmetros no MLFlow
+![PreparacaoDados](docs/PreparacaoDados.png)
+
+
+
+### 6 Implementar o pipeline de treinamento do modelo com o MlFlow usando o nome "Treinamento"
+    1. Com os dados separados para treinamento, treine um modelo com regressão logística do sklearn usando a biblioteca pyCaret.
+    2. Registre a função custo "log loss" usando a base de teste
+    3. Com os dados separados para treinamento, treine um modelo de árvore de decisão do sklearn usando a biblioteca pyCaret.
+    4. Registre a função custo "log loss" e F1_score para o modelo de árvore.
+    5. Selecione um dos dois modelos para finalização e justifique sua escolha.
+
+    O fluxo de treinamento executou quatro modelos: dois de Regressão Logística e dois de Árvore de Decisão. Inicialmente, foi realizado um treinamento básico para cada tipo de modelo com a configuração padrão definida na experiência. Em seguida, para cada tipo de modelo, foi aplicado um processo de ajuste de hiperparâmetros (tuning), como mostrado na imagem abaixo. Após o treinamento, os dois modelos otimizados — tanto a Regressão Logística quanto a Árvore de Decisão — foram avaliados com o dataset de teste. Os resultados da avaliação estão apresentados na aba de teste dos modelos, onde foram registrados métricas como log loss e F1 score.
+      
+    Escolha do modelo:
+    Com base na análise da tabela e na comparação dos indicadores de desempenho entre os modelos Logistic Regression (lr) e Decision Tree (dt), a escolha final foi pelo Logistic Regression ajustado (lr). Esse modelo apresentou melhor desempenho nas principais métricas, com maior F1-score, maior Recall e menor Log Loss, sendo, portanto, o mais indicado para o problema em questão.
+    
+    Abaixo seguem os prints do MLFlow:
+![Treinamento1](docs/Treinamento1.png)
+![Treinamento2_lr](docs/Treinamento2_lr.png)
+![Treinamento3_lr](docs/Treinamento3_lr.png)
+![Treinamento4_dt](docs/Treinamento4_dt.png)
+![Treinamento5_dt](docs/Treinamento5_dt.png)
+
+
 ## Overview
 
 This is your new Kedro project, which was generated using `kedro 0.19.12`.
@@ -47,28 +80,3 @@ Exmplo de marcaçao MD kedro jupyter notebook
 4-Visualizar o front-end
 
 
-Analisando a tabela, vamos comparar os principais indicadores de desempenho entre os modelos lr (Logistic Regression) e dt (Decision Tree):
-
-Métrica	Logistic Regression (lr)	Decision Tree (dt)	Melhor
-AUC	0.5921	0.5923	Empate (quase idênticos)
-Accuracy	0.5682	0.5883	dt
-F1 Score	0.5397	0.4644	lr
-Recall	0.5296	0.3758	lr
-Log Loss	0.6821	0.7171	lr (menor é melhor)
-🧠 Análise
-F1 Score e Recall são métricas muito importantes quando o dataset é desbalanceado ou você quer equilibrar falsos positivos e falsos negativos.
-
-Log Loss penaliza muito previsões com alta confiança e erradas — e o lr também teve melhor resultado aqui.
-
-A AUC praticamente empatou, com vantagem minúscula para a árvore.
-
-A Accuracy foi maior na dt, mas isso pode ser enganoso em problemas com desequilíbrio nas classes.
-
-✅ Conclusão
-Você deve escolher o Logistic Regression (lr), porque:
-
-Ele teve melhor F1, melhor Recall, menor Log Loss.
-
-A pequena perda em Accuracy e AUC não compensa a perda nos outros pontos, principalmente se seu problema é sensível a erros de classificação.
-
-Se quiser, posso te ajudar a registrar isso no MLflow ou usar como base para uma próxima inferência!
