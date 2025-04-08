@@ -17,8 +17,8 @@ def inferencia(raw_prod):
     raw_data = raw_prod.dropna()
     prod = raw_data[['lat','lon','minutes_remaining','period','playoffs','shot_distance']]
     #model_uri = "runs://uns:/4fc7f9e665f84f838e62031857300561/model"  #antiga
-    #model_uri = 'runs:/c37b973232204389932db377de875f41/model' #nova Decision Tree Classifier
-    model_uri = 'runs:/8c0fa7643cdd4682a29a14bac5f43a67/model' #nova Logistic Regression 
+    model_uri = 'runs:/c37b973232204389932db377de875f41/model' #nova Decision Tree Classifier
+    #model_uri = 'runs:/8c0fa7643cdd4682a29a14bac5f43a67/model' #nova Logistic Regression 
     
 
     loaded_model = mlflow.pyfunc.load_model(model_uri)
