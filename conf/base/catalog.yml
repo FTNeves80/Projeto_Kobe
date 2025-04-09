@@ -36,6 +36,19 @@ tuned_model_lr:
   type: pickle.PickleDataset
   filepath: data/06_models/tuned_model_lr.pkl
 
+roc_curve_test:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/roc_curve_test.png
+  save_args:
+    format: png
+
+roc_curve_prd:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/roc_curve_prd.png
+  save_args:
+    format: png
+
+
 #Para no mlflow
 #best_dt_model:
 #  type: kedro_mlflow.io.models.MlflowModelTrackingDataset

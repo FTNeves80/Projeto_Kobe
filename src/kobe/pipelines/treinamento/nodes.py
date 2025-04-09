@@ -3,14 +3,13 @@ This is a boilerplate pipeline 'treinamento'
 generated using Kedro 0.19.12
 """
 import mlflow
-import mlflow.sklearn
 from pycaret.classification import ClassificationExperiment
 from mlflow.tracking import MlflowClient
 import pandas as pd
 from datetime import date
 import joblib
-from sklearn.metrics import accuracy_score, f1_score, log_loss
-
+from sklearn.metrics import accuracy_score, f1_score, log_loss , roc_curve, auc
+import matplotlib.pyplot as plt
 
 def treinar(train_set,test_set,session_id):
     
@@ -29,11 +28,11 @@ def treinar(train_set,test_set,session_id):
     model_dt = exp.create_model('dt')            
     # Treinamento do Logistic Regression
     model_lr = exp.create_model('lr')
-    #Tunando os modelo
+    #Tunando os modelos
     tuned_model_dt = exp.tune_model(model_dt, n_iter=100, optimize='AUC')
     tuned_model_lr = exp.tune_model(model_lr, n_iter=100, optimize='AUC')
 
-       # Testes
+    # Preparando dados e fazendo inferencia de teste nos modelos
     data = test_set.dropna()
     X = data[['lat','lon','minutes_remaining','period','playoffs','shot_distance']]
     y = data['shot_made_flag']
@@ -44,7 +43,7 @@ def treinar(train_set,test_set,session_id):
     preds_lr = tuned_model_lr.predict(X)
     probas_lr = tuned_model_lr.predict_proba(X)[:, 1]
 
-    #mlflow.set_experiment("Treinamento")
+    
     with mlflow.start_run(run_name=f"Teste_modelos_{date.today().strftime('%Y-%m-%d')}",nested=True):
     # Logando métricas no mesmo run
         mlflow.log_metric("dt_accuracy", accuracy_score(y, preds_dt))
@@ -57,5 +56,17 @@ def treinar(train_set,test_set,session_id):
 
     print("Métricas logadas no MLflow com sucesso.")
 
-    return tuned_model_dt, tuned_model_lr
+    #Gerando curva ROC
+    fpr, tpr, _ = roc_curve(y, preds_lr)
+    roc_curve_test = plt.figure()
+    plt.plot(fpr, tpr, label=f'AUC = {auc(fpr, tpr):.2f}')
+    plt.plot([0, 1], [0, 1], 'k--')
+    plt.xlabel('FPR')
+    plt.ylabel('TPR')
+    plt.title('Curva ROC')
+    plt.legend()
+    
+
+
+    return tuned_model_dt, tuned_model_lr ,roc_curve_test
 

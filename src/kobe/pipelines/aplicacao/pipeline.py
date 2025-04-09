@@ -12,7 +12,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         node(
             nodes.inferencia,
             inputs=['raw_prod'],
-            outputs="predictions",
+            outputs=["predictions","roc_curve_prd"],
             tags=['inferencia']
         )
     ])

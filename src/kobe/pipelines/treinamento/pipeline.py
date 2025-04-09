@@ -11,7 +11,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         node(
             func=nodes.treinar,
             inputs=["train_set","test_set", "params:session_id"],
-            outputs=["tuned_model_dt" ,"tuned_model_lr"],
+            outputs=["tuned_model_dt" ,"tuned_model_lr","roc_curve_test"],
             tags=["train"]
         )
 

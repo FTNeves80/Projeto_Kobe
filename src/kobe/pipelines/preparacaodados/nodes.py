@@ -20,12 +20,8 @@ def dividir_dados(data_filtered):
     if mlflow.active_run():
        mlflow.end_run()
     
-    
     train_set, test_set = train_test_split(data_filtered,test_size=0.2, random_state = 10,stratify=data_filtered['shot_made_flag'])
     
-    #mlflow.set_experiment("PreparacaoDados")
-    
-    # Cria nome com data
     run_name = f"PreparacaoDados_{date.today().strftime('%Y-%m-%d')}"
     
     # Log de parâmetros e métricas no MLflow

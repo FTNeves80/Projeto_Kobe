@@ -147,41 +147,13 @@ Abaixo a combinação de prints extraídos dos registros do MLFlow:
 ![streamlit1dt](docs/streamlit1dt.png)
 ![streamlit2dt](docs/streamlit2dt.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-## Overview
-
-This is your new Kedro project, which was generated using `kedro 0.19.12`.
-
-exemplo de sintaxe de MD [Kedro documentation](https://docs.kedro.org) to get started.
-
-### JupyterLab
-## Project dependencies
-
-
-```
-Exmplo de marcaçao MD kedro jupyter notebook
-```
-
 ### Como executar o projeto Ajudar essa respostas
+
 1-kedro run
-2-subir o modelo
-3-moninotar via mlflow
-4-Visualizar o front-end
-streamlit> streamlit run app.py
+2-mlflow ui
+3-mlflow models serve --model-uri models:/runs:/c37b973232204389932db377de875f41/model/1 --env-manager=local --port 5001
+4-..\streamlit> streamlit run app.py
 
-
-mlflow models serve --model-uri models:/runs:/c37b973232204389932db377de875f41/model/1 --env-manager=local --port 5001
 
 
 
