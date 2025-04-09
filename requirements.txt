@@ -9,3 +9,4 @@ scikit-optimize
 kedro-mlflow
 streamlit
 openpyxl
+seaborn==0.12.2
